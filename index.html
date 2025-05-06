@@ -6,16 +6,29 @@
     <title>Document</title>
     <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
     <link rel="stylesheet" href="estilos.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <head>
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+</head>
+
 </head>
 <body>
     <div id="appToDoList">
 
         <div class="formContainer">
+
             <h2>To-Do List</h2>
             <div class="inputTexto">
-                <input type="text" placeholder="Ingresa tarea nueva">
-                <button>+</button>
+                <input type="text" v-model="nuevaTarea" placeholder="Agregar tarea">
+                <button @click="agregarTarea">+</button>
             </div>
+
+            <div class="contenedorTareas">
+                <ul>
+                    <li v-for="(tarea,index) in tareas" :key="index">{{tarea}}   <button @click="eliminarTarea(index)" class="material-icons">delete</button></li>
+                </ul>
+            </div>
+
          </div>
     </div>
 

@@ -5,7 +5,7 @@ body{
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: rgb(40, 157, 102);
+    background-color: rgb(37, 159, 183);
 }
 
 #appToDoList{
@@ -21,12 +21,16 @@ body{
     justify-content:flex-start;
     align-items: center;
     flex-direction: column;
-    
-    
 
     background-color: rgb(255, 255, 255);
-    height: 300px;
+    height: fit-content;
     width: 400px;
     border-radius: 1rem;
+    padding-bottom: 1rem;
     
 }
+
+.contenedorTareas{
+    background-color: aqua;
+}
+
