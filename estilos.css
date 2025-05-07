@@ -5,7 +5,7 @@ body{
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: rgb(40, 157, 102);
+    background-color: rgb(37, 159, 183);
 }
 
 #appToDoList{
@@ -21,12 +21,48 @@ body{
     justify-content:flex-start;
     align-items: center;
     flex-direction: column;
-    
-    
 
     background-color: rgb(255, 255, 255);
-    height: 300px;
+    height: fit-content;
     width: 400px;
     border-radius: 1rem;
+    padding-bottom: 1rem;
     
 }
+
+.contenedorTareas{
+    display: flex;
+    justify-content:center;
+    width: 80%;
+   
+    
+    
+}
+
+ul{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 0%;
+}
+
+.item-tarea{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    text-align: center;
+    padding: 8px;
+    border-bottom: 1px solid #ccc;
+    width:100%;
+
+}
+
+.btn-borrar{
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+}
+
+
+
+
