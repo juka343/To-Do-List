@@ -31,6 +31,38 @@ body{
 }
 
 .contenedorTareas{
-    background-color: aqua;
+    display: flex;
+    justify-content:center;
+    width: 80%;
+   
+    
+    
 }
+
+ul{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 0%;
+}
+
+.item-tarea{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    text-align: center;
+    padding: 8px;
+    border-bottom: 1px solid #ccc;
+    width:100%;
+
+}
+
+.btn-borrar{
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+}
+
+
+
 

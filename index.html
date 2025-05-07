@@ -25,7 +25,11 @@
 
             <div class="contenedorTareas">
                 <ul>
-                    <li v-for="(tarea,index) in tareas" :key="index">{{tarea}}   <button @click="eliminarTarea(index)" class="material-icons">delete</button></li>
+                    <li class="item-tarea" v-for="(tarea,index) in tareas" :key="index"> 
+                        <input type="checkbox" :value="tarea" >
+                        {{tarea}} 
+                        <button @click="eliminarTarea(index)" class="material-icons btn-borrar">delete</button>
+                    </li>
                 </ul>
             </div>
 
