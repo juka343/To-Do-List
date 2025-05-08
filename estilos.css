@@ -1,11 +1,15 @@
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
 
+:root{
+    --colorFondo: rgb(37, 159, 183);
+}
+
 body{
     font-family: 'Montserrat';
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: rgb(37, 159, 183);
+    background-color: var(--colorFondo);
 }
 
 #appToDoList{
@@ -15,6 +19,8 @@ body{
     align-items: center;
     flex-direction: column;
 }
+
+
 
 .formContainer{
     display: flex;
@@ -27,16 +33,39 @@ body{
     width: 400px;
     border-radius: 1rem;
     padding-bottom: 1rem;
+    transition: 1s;
     
 }
+
+.containerInputTexto{
+    display: flex;
+    justify-content: center;
+    width: 80%;
+    height: 30px;
+}
+
+.containerInputTexto input{
+    border: none;
+    background-color: #dddddd;
+    width: 400px;
+    border-radius: 10px 0px 0px 10px;
+    text-align: center;
+}
+
+.containerInputTexto button{
+    border: none;
+    border-radius: 0px 10px 10px 0px;
+    background-color: #dddddd;
+    cursor: pointer;
+
+}
+
 
 .contenedorTareas{
     display: flex;
     justify-content:center;
-    width: 80%;
-   
-    
-    
+    width: 100%;
+
 }
 
 ul{
@@ -44,6 +73,7 @@ ul{
     flex-direction: column;
     justify-content: center;
     padding: 0%;
+    width: 80%;
 }
 
 .item-tarea{
@@ -63,6 +93,27 @@ ul{
     cursor: pointer;
 }
 
+#contenedorBotonesClear{
+    display: flex;
+    width: 100%;
+    justify-content: space-evenly;
+}
 
+.btnClear{
+    display: flex;
+    justify-content: center;
+    width:100px;
+    border-radius: 10px;
+    color: white;
+    background-color: var(--colorFondo);
+    border: none;
+    padding: 10px 80px;
+    cursor: pointer;
+    
+}
+
+input[type="checkbox"]{
+    cursor: pointer;
+}
 
 

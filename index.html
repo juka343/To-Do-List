@@ -18,7 +18,7 @@
         <div class="formContainer">
 
             <h2>To-Do List</h2>
-            <div class="inputTexto">
+            <div class="containerInputTexto">
                 <input type="text" v-model="nuevaTarea" placeholder="Agregar tarea">
                 <button @click="agregarTarea">+</button>
             </div>
@@ -32,6 +32,13 @@
                     </li>
                 </ul>
             </div>
+
+            <div id="contenedorBotonesClear">
+                <button class="btnClear">Clear Completed</button>
+                <button class="btnClear">Clear all</button>
+            </div>
+            
+
 
          </div>
     </div>
