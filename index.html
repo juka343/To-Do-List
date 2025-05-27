@@ -19,23 +19,23 @@
 
             <h2>To-Do List</h2>
             <div class="containerInputTexto">
-                <input type="text" v-model="nuevaTarea" placeholder="Agregar tarea">
-                <button @click="agregarTarea">+</button>
+                <input @keyup.enter="agregarTarea" type="text" v-model="nuevaTarea" placeholder="Agregar tarea">
+                <button  @click="agregarTarea">+</button>
             </div>
 
             <div class="contenedorTareas">
                 <ul>
                     <li class="item-tarea" v-for="(tarea,index) in tareas" :key="index"> 
-                        <input type="checkbox" :value="tarea" >
-                        {{tarea}} 
+                        <input type="checkbox" v-model="tarea.completado" >
+                        <span :class="{tachado: tarea.completado}">{{tarea.texto}} </span>     
                         <button @click="eliminarTarea(index)" class="material-icons btn-borrar">delete</button>
                     </li>
                 </ul>
             </div>
 
             <div id="contenedorBotonesClear">
-                <button class="btnClear">Clear Completed</button>
-                <button class="btnClear">Clear all</button>
+                <button @click="clearCompleted" class="btnClear">Clear Completed</button>
+                <button @click="clearAll" class="btnClear">Clear all</button>
             </div>
             
 
